@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: open-sky
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+logging:
+  level:
+    root: INFO
+    com.example.opensky: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
