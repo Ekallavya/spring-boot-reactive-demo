@@ -10,7 +10,6 @@
     </parent>
     <groupId>com.universe</groupId>
     <artifactId>spring-boot-reactive-demo</artifactId>
-<!--    <version>0.0.1-SNAPSHOT</version>-->
     <version>1</version>
     <name>spring-boot-reactive-demo</name>
     <description>Simple Spring Boot Reactive Application</description>
@@ -39,7 +38,7 @@
     </dependencies>
 
     <build>
-        <finalName>opensky</finalName>
+        <finalName>spring-boot-reactive-demo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

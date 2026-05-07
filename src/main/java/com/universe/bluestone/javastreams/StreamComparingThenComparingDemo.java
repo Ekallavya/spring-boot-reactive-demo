@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class StreamComparingExample {
+public class StreamComparingThenComparingDemo {
     public static void main(String[] args) {
         List<Book> books = Arrays.asList(
             new Book("Author B", 25.0),
