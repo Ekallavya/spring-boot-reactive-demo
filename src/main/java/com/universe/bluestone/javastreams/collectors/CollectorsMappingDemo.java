@@ -13,6 +13,9 @@ public class CollectorsMappingDemo {
 		        .stream()
 		        .collect(Collectors.mapping(Bank::getName, Collectors.toList()));
 		    System.out.println("List of Bank names:" + bankNames);
+
+		List<String> bankNames1 = bankList1
+                .stream().map(Bank::getName).toList();
 		
 	}
 }

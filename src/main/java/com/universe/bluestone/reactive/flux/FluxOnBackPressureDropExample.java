@@ -4,7 +4,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
 import java.time.Duration;
 
-public class FluxBackPressureDropExample {
+public class FluxOnBackPressureDropExample {
     public static void main(String[] args) throws InterruptedException {
         // Fast producer: 100 items very quickly
         Flux<Object> fastProducer = Flux.generate(() -> 97, (state, sink) -> {

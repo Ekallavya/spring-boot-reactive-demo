@@ -6,8 +6,8 @@ import java.time.Duration;
 public class FluxTimeoutExample {
     public static void main(String[] args) {
         Flux<String> flux = Flux.just("test-item")
-            .delayElements(Duration.ofSeconds(10)) // Delays the emission by 10 seconds
-            .timeout(Duration.ofSeconds(1));       // Sets a timeout of 1 second
+            .delayElements(Duration.ofSeconds(1)) // Delays the emission by 10 seconds
+            .timeout(Duration.ofSeconds(2));       // Sets a timeout of 1 second
 
         flux.subscribe(
             item -> System.out.println("Received: " + item),
@@ -21,5 +21,17 @@ public class FluxTimeoutExample {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        System.out.println("----------------------------");
+
+        Flux<String> flux1 = Flux.just("test-item")
+                .delayElements(Duration.ofSeconds(3)) // Delays the emission by 10 seconds
+                .timeout(Duration.ofSeconds(2));       // Sets a timeout of 1 second
+
+        flux1.subscribe(
+                item -> System.out.println("Received: " + item),
+                error -> System.err.println("Error: " + error.getMessage()), // Handles the TimeoutException
+                () -> System.out.println("Completed")
+        );
     }
 }

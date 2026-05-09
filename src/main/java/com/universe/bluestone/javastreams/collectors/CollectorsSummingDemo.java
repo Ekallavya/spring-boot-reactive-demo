@@ -16,5 +16,7 @@ public class CollectorsSummingDemo {
         long sumOfElements = longStream.mapToLong(e -> e).sum();
 
         System.out.println("SumAndAvg of the stream - " + sumOfElements);
+
+        System.out.println(longList.stream().mapToLong(x->x.longValue()).sum());
     }
 }

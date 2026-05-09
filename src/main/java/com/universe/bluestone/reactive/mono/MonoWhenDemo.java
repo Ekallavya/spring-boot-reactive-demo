@@ -13,7 +13,8 @@ public class MonoWhenDemo {
 
             combinedMono.subscribe(
                     unused -> System.out.println("Both monos completed successfully!"),
-                    error -> System.err.println("An error occurred: " + error)
+                    error -> System.err.println("An error occurred: " + error),
+                    () -> System.out.println("Done!")
             );
             try {
                 Thread.sleep(Duration.ofSeconds(5));

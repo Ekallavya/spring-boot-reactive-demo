@@ -5,7 +5,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
 import java.time.Duration;
 
-public class FluxBackPressureBufferExample {
+public class FluxOnBackPressureBufferExample {
     public static void main(String[] args) throws InterruptedException {
 
         // 1. Create a fast publisher

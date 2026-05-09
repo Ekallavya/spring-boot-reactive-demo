@@ -36,6 +36,10 @@ public class CollectorsComparingMinByMaxBy
                 .collect(Collectors.maxBy(
                     Comparator.comparing(Payroll::getEmployee)))
                 .get();
+
+        salaries.stream()
+                .max(Comparator.comparing(Payroll::getEmployee))
+                .get();
         
         System.out.println("Employee with maximum name : " + maxName.getEmployee());
     }

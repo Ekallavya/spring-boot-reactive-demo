@@ -1,5 +1,6 @@
 package com.universe.bluestone.javastreams.collectors;
 
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
   
@@ -10,14 +11,14 @@ public class CollectorsCountingDemo {
     {
         // creating a stream of strings
         Stream<String> s = Stream.of("1", "2", "3", "4");
-  
+
         // using Collectors counting() method to
         // count the number of input elements
         long ans = s.collect(Collectors.counting());
-  
+
         // displaying the required count
         System.out.println(ans);
-        Stream<String> p = Stream.of("1", "2", "3", "4");
+        Stream<String> p = Stream.generate(() -> "Hello").limit(100);
         System.out.println(p.count());
     }
 }

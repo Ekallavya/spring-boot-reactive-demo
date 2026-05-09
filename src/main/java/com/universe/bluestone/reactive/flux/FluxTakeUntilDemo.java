@@ -1,10 +1,11 @@
 package com.universe.bluestone.reactive.flux;
 
+import reactor.core.publisher.Flux;
+
 public class FluxTakeUntilDemo {
     public static void main(String[] args) {
-            FluxIntegerGenerator generator = new FluxIntegerGenerator();
-            generator.generateIntegers()
-                    .takeUntil(i -> i > 105) // Take values until the condition is met
-                    .subscribe(System.out::println);
+            Flux<Integer> flux1 = Flux.range(100,200);
+
+            flux1.takeUntil(i -> i % 3 == 0).subscribe(System.out::println);
     }
 }

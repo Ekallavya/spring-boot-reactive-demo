@@ -32,6 +32,9 @@ public class CollectorsGroupingByReducing {
 						BinaryOperator.maxBy(Comparator.comparing(Person::getAge))
 				));
 
+		Optional<Person> oldestPersonOptional2 = people.stream()
+				.reduce(BinaryOperator.maxBy(Comparator.comparing(Person::getAge)));
+
 		oldestPersonOptional.ifPresent(System.out::println);
 
 	}

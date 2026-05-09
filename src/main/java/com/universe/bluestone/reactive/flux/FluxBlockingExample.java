@@ -14,8 +14,8 @@ public class FluxBlockingExample {
         System.out.println("First element is: " + firstElement);
         // Output: First element is: A
 
-        //String lastElement = flux.blockLast();
-        String lastElement = flux.blockLast(Duration.ofMillis(2000)); // This will likely time out and return null
+        String lastElement = flux.blockLast();
+        //String lastElement = flux.blockLast(Duration.ofMillis(2000)); // This will likely time out and return null
 
         System.out.println("last element is: " + lastElement);
     }

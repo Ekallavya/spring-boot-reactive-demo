@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 
-public class CollectorsGroupBy {
+public class CollectorsGroupByExample {
 	public static void main(String args[])
 	{
 	

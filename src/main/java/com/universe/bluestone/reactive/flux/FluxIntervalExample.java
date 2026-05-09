@@ -17,18 +17,18 @@ public class FluxIntervalExample {
     public static void main(String[] args) throws InterruptedException {
 
 
-        Flux<Long>  longFlux=Flux.interval(Duration.ofMillis(100));
+        Flux<Long>  longFlux=Flux.interval(Duration.ofMillis(10));
 
         longFlux.subscribe(System.out::println);
 
         MetricsService metricsService = new MetricsService();
 
-        Flux.interval(Duration.ofSeconds(10)) // Emits a Long tick every 10 seconds on a background thread
-            .doOnNext(tick -> System.out.println("Tick received: " + tick))
-            .subscribe(tick -> metricsService.collectAndSendMetrics()); // Trigger the action
+//        Flux.interval(Duration.ofSeconds(10)) // Emits a Long tick every 10 seconds on a background thread
+//            .doOnNext(tick -> System.out.println("Tick received: " + tick))
+//            .subscribe(tick -> metricsService.collectAndSendMetrics()); // Trigger the action
 
         // Keep the main thread alive to observe the interval
-        Thread.sleep(100000);
+        Thread.sleep(4000);
 
     }
 }
