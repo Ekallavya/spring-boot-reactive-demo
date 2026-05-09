@@ -43,10 +43,6 @@ public class StreamFilterDemo {
                 .sorted(Comparator.comparing(User::getSalary).reversed())
                 .forEach(System.out::println);
 
-
-
-    
-
     }
 
     private static @NonNull List<User> getUsers() {

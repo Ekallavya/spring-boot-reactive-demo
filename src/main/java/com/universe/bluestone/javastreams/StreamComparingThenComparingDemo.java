@@ -38,7 +38,7 @@ public class StreamComparingThenComparingDemo {
 
         System.out.println("-----------------------------");
 
-        // Here  last sorted only impact
+        // Here  second sort will override first sort
         books.stream()
                 .sorted(Comparator.comparing(Book::getAuthor))
                 .sorted(Comparator.comparing(Book::getPrice))
