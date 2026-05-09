@@ -2,7 +2,7 @@ package com.universe.bluestone.javastreams;
 
 import java.util.stream.Stream;
 
-public class CustomSequenceExample {
+public class StreamGenerateDemo {
     private static int counter = 0;
 
     public static void main(String[] args) {
@@ -15,5 +15,13 @@ public class CustomSequenceExample {
 
         System.out.println("Generating a custom sequence (sequentially):");
         customStream.forEach(System.out::println);
+
+
+        System.out.println("Generating 5 random numbers:");
+        Stream<Double> randomStream = Stream.generate(Math::random)
+                .limit(5); // Limits the stream to 5 elements
+
+
+        randomStream.forEach(System.out::println);
     }
 }

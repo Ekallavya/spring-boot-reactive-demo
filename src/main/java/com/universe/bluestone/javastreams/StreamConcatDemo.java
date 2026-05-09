@@ -2,7 +2,7 @@ package com.universe.bluestone.javastreams;
 
 import java.util.stream.Stream;
 
-public class StreamConcatExample {
+public class StreamConcatDemo {
     public static void main(String[] args) {
         // Create two streams of integers
         Stream<Integer> stream1 = Stream.of(1, 2, 3);

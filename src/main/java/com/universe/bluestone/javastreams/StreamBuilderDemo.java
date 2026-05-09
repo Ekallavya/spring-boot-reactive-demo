@@ -2,7 +2,7 @@ package com.universe.bluestone.javastreams;
 
 import java.util.stream.Stream;
 
-public class StreamBuilderExample {
+public class StreamBuilderDemo {
     public static void main(String[] args) {
         // 1. Create a Stream.Builder instance for strings
         Stream.Builder<String> builder = Stream.builder();

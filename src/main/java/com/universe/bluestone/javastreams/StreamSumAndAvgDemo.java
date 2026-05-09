@@ -3,7 +3,7 @@ package com.universe.bluestone.javastreams;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StreamsSumAndAvgDemo {
+public class StreamSumAndAvgDemo {
 
 	public static void main(String[] args) {
 		

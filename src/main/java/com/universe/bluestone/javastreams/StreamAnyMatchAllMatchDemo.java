@@ -11,7 +11,7 @@ import java.util.List;
 //import java.util.Set;
 import java.util.stream.Collectors;
 
-public class StreamsAnyMatchAllMatchDemo {
+public class StreamAnyMatchAllMatchDemo {
 	public static void main(String[] args) {
 	List<Bank> bankList1 = DataProvider.getBankList();
 

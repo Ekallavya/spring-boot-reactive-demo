@@ -1,6 +1,8 @@
 package com.universe.bluestone.javastreams;
 
-public class StreamsFindAnyDemo {
+import java.util.Arrays;
+
+public class StreamFindAnyDemo {
 
     public static void main(String[] args) {
         String[] strArray = {"I", "Love", "Stack", "Overflow"};
@@ -10,7 +12,7 @@ public class StreamsFindAnyDemo {
         strArray[2] = "Stack";
         strArray[3] = "Overflow";
 
-        System.out.println("==========>"+java.util.Arrays.stream(strArray).findAny().orElse("Not Found"));
+        System.out.println("==========>"+ Arrays.stream(strArray).findAny().orElse("Not Found"));
 
     }
 }

@@ -1,6 +1,6 @@
 package com.universe.bluestone.javastreams;
 
-public class StreamsParallelStreamDemo {
+public class StreamParallelStreamDemo {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 

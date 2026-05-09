@@ -2,7 +2,7 @@ package com.universe.bluestone.javastreams;
 
 import java.util.stream.Stream;
 
-public class StreamIterateExample {
+public class StreamIterateDemo {
     public static void main(String[] args) {
         System.out.println("Generating a sequence using Stream.iterate():");
         Stream.iterate(1, n -> n + 1)

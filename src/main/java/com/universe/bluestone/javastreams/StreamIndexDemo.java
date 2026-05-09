@@ -1,6 +1,6 @@
 package com.universe.bluestone.javastreams;
 
-public class StreamsIndexDemo {
+public class StreamIndexDemo {
     public static void main(String[] args) {
         String[] names = {"Alice", "Bob", "Charlie", "David", "Eve"};
 

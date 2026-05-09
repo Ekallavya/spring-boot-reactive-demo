@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Spliterator;
 import java.util.stream.Stream;
     
-public class StreamsSpliteratorExample
+public class StreamSpliteratorDemo
 {
     public static void main(String[] args) 
     {
@@ -35,7 +35,7 @@ public class StreamsSpliteratorExample
         
         System.out.println("Content of arraylist :");
         // forEachRemaining method    
-        splitr1.forEachRemaining((n) -> System.out.println(n));
+        splitr1.forEachRemaining(System.out::println);
         
         // Obtaining another  Stream to the array list.
         Stream<Integer> str1 = al.stream();
@@ -47,12 +47,12 @@ public class StreamsSpliteratorExample
         // If splitr1 could be split, use splitr2 first.
         if(splitr2 != null) {
         System.out.println("Output from splitr2: ");
-        splitr2.forEachRemaining((n) -> System.out.println(n));
+        splitr2.forEachRemaining(System.out::println);
         }
 
         // Now, use the splitr
         System.out.println("\nOutput from splitr1: ");
-        splitr1.forEachRemaining((n) -> System.out.println(n));
+        splitr1.forEachRemaining(System.out::println);
             
     }
 }

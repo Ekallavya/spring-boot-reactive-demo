@@ -3,7 +3,7 @@ package com.universe.bluestone.javastreams;
 import java.util.Arrays;
 import java.util.List;
 
-public class StreamsNoneMatchDemo {
+public class StreamNoneMatchDemo {
 
 	public static void main(String[] args) {
 		

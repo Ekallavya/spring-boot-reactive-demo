@@ -10,7 +10,7 @@ import java.util.OptionalInt;
 import java.util.stream.Collectors;
 
 
-public class StreamsMaxExample {
+public class StreamMaxDemo {
 	public static void main(String args[])
 	{
 		List<Employee> employeeList = createEmployeeList();

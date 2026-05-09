@@ -31,21 +31,19 @@ public class StreamFilterDemo {
         users.stream().filter(u-> {return ("Manager".equals(u.getDesignation()) || "SrManager".equals(u.getDesignation())) && u.getSalary() > 100000L;})
                         .forEach(System.out::println);
 
+        System.out.println("-----------------------------");
 
+        users.stream().filter(u-> ("Manager".equals(u.getDesignation()) || "SrManager".equals(u.getDesignation())) && u.getSalary() > 100000L)
+                .sorted(Comparator.comparing(u-> u.getName().length()))
+                .forEach(System.out::println);
+
+        System.out.println("-----------------------------");
         users.stream().filter(u-> ("Manager".equals(u.getDesignation()) || "SrManager".equals(u.getDesignation())) && u.getSalary() > 100000L)
                 .sorted(Comparator.comparing(u-> u.getName().length()))
                 .sorted(Comparator.comparing(User::getSalary).reversed())
                 .forEach(System.out::println);
 
-        users.stream().filter(u-> ("Manager".equals(u.getDesignation()) || "SrManager".equals(u.getDesignation())) && u.getSalary() > 100000L)
-                .sorted(Comparator.comparing(u-> u.getName().length()))
-                .sorted(Comparator.comparing(User::getSalary).reversed())
-                .forEach(System.out::println);
 
-        users.stream().filter(u-> ("Manager".equals(u.getDesignation()) || "SrManager".equals(u.getDesignation())) && u.getSalary() > 100000L)
-                .sorted(Comparator.comparing(u-> u.getName().length()))
-                .sorted(Comparator.comparing(User::getSalary).reversed())
-                .forEach(System.out::println);
 
     
 

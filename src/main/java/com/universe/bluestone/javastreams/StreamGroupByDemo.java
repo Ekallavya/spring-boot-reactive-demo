@@ -7,9 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
  
-public class StreamsGroupbyTest {
-	public static void main(String args[])
-	{
+public class StreamGroupByDemo {
+	public static void main(String args[]){
 		List<Employee> employeeList = createEmployeeList();
 		Map<String, List<Employee>> map = employeeList.stream()
 				                              .collect(Collectors.groupingBy(Employee::getName));

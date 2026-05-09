@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StreamsMinMaxDemo {
+public class StreamMinMaxDemo {
 
 	public static void main(String[] args) {
 		List<Bank> bankList1 = DataProvider.getBankList();

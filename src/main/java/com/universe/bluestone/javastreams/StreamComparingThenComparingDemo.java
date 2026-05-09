@@ -12,16 +12,37 @@ public class StreamComparingThenComparingDemo {
             new Book("Author B", 25.0),
             new Book("Author A", 20.0),
             new Book("Author B", 30.0),
-            new Book("Author A", 15.0)
+            new Book("Author A", 15.0),
+            new Book("Author C", 10.0),
+            new Book("Author C", 40.0)
         );
-
+        //simple sorting
+        System.out.println("Sorted Books: by author");
+        books.stream()
+                .sorted(Comparator.comparing(Book::getAuthor))
+                .toList().forEach(System.out::println);
+        System.out.println("-----------------------------");
+        System.out.println("Sorted Books: by author and then  by price");
         // Sorting using streams and chained comparators
-        List<Book> sortedBooks = books.stream()
+        books.stream()
             .sorted(Comparator.comparing(Book::getAuthor)
                               .thenComparing(Book::getPrice))
-            .toList();
+            .toList().forEach(System.out::println);
+        System.out.println("-----------------------------");
+         System.out.println("Sorted Books: by author and then  by price in reverse order");
+        // Sorting using streams and chained comparators with reversed order
+        books.stream()
+            .sorted(Comparator.comparing(Book::getAuthor)
+                              .thenComparing(Comparator.comparing(Book::getPrice).reversed()))
+            .toList().forEach(System.out::println);
 
-        System.out.println("Sorted Books:");
-        sortedBooks.forEach(System.out::println);
+        System.out.println("-----------------------------");
+
+        // Here  last sorted only impact
+        books.stream()
+                .sorted(Comparator.comparing(Book::getAuthor))
+                .sorted(Comparator.comparing(Book::getPrice))
+                .toList().forEach(System.out::println);
+
     }
 }
