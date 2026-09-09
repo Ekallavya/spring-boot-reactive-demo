@@ -14,6 +14,7 @@ public class HandleDemo {
                 System.out.println("Error: " + ex.getMessage());
                 return "Default Value";
             }
+            System.out.println("form handle: " + result);
             return result;
         }).thenAccept(System.out::println);
     }

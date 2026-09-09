@@ -15,7 +15,7 @@ class Test{
 		switch(temp){
 		
 		case A :System.out.println("America");
-		case B :System.out.println("BreZil");
+		case B :System.out.println("Brazil");
 		case C :System.out.println("Canada");
 		case D :System.out.println("Denmark");
 		case E :System.out.println("England");

@@ -9,3 +9,7 @@ public class FluxTakeUntilDemo {
             flux1.takeUntil(i -> i % 3 == 0).subscribe(System.out::println);
     }
 }
+//output
+//100
+//101
+//102

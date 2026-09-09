@@ -1,4 +1,7 @@
 package com.universe.bluestone.serialization;
+
+import java.util.Objects;
+
 public class Employee extends Thread implements java.io.Serializable{
 	/**
 	 * 
@@ -62,5 +65,17 @@ public class Employee extends Thread implements java.io.Serializable{
 	public void mailCheck()
 	{
 		System.out.println("Mailing a check to " + name + " " + address);
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (!(o instanceof Employee employee)) return false;
+        return SSN == employee.SSN && number == employee.number && Objects.equals(name, employee.name) && Objects.equals(address, employee.address);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(name, address, SSN, number);
 	}
 }

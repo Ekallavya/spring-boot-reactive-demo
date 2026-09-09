@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 
 public class StreamMaxDemo {
-	public static void main(String args[])
+	public static void main(String[] args)
 	{
 		List<Employee> employeeList = createEmployeeList();
 		List<String> employeeFilteredList = employeeList.stream()
@@ -40,11 +40,16 @@ public class StreamMaxDemo {
 			System.out.println(e11.get());
 		
 		//max
-		System.out.println("=================>max ");
+		System.out.println("=================>max age");
 		employeeList = createEmployeeList();
 		OptionalInt max = employeeList.stream().
 				          mapToInt(Employee::getAge).max();
-		        
+
+		//max name
+		System.out.println("=================>max name ");
+		employeeList = createEmployeeList();
+		Optional<Employee> maxName = employeeList.stream().max((e1, e2) -> e1.getName().compareTo(e2.getName()));
+		System.out.println("=================>max name "+maxName.get().getName());
 		if(max.isPresent())
 			System.out.println("Maximum age of Employee: "+max.getAsInt());
 		System.out.println("=================>sort ");
@@ -55,6 +60,9 @@ public class StreamMaxDemo {
 			if(e1.getAge()-e2.getAge() == 0) return 0;
 			if(e1.getAge()-e2.getAge() < 0) return -1;
 			return 0;});
+		employeeList.forEach(System.out::println);
+		employeeList = createEmployeeList();
+		employeeList.sort((e1,e2)-> e1.getName().compareTo(e2.getName()));
 		employeeList.forEach(System.out::println);
 		
 		

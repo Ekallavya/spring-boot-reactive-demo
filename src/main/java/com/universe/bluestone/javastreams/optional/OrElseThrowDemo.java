@@ -10,7 +10,7 @@ public class OrElseThrowDemo {
                     .orElseThrow(() -> new IllegalArgumentException("Value cannot be null"));
             System.out.println(result);
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            System.out.println("From Catch Block :"+e.getMessage());
         }
     }
 }

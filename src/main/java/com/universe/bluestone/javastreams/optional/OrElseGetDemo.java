@@ -11,5 +11,8 @@ public class OrElseGetDemo {
                 .orElseGet(() -> "Default Value");
 
         System.out.println(result); // Output: Default Value
+
+        Optional<String>  temp = Optional.of("Now or Never");
+        String str = temp.orElse("Default Value");
     }
 }

@@ -10,3 +10,10 @@ public class FluxBufferUntilChangedExample {
                 .subscribe(list -> System.out.println("Received: " + list));
     }
 }
+
+//output
+//Received: [A, A, A]
+//Received: [B, B]
+//Received: [C]
+//Received: [D, D]
+//Received: [A]

@@ -97,42 +97,42 @@ public class DequeueTest {
 		System.out.println(deque);
 		
 		
-		Integer peek =deque.peek();//  retrive head element and does not remove , throws exception if deque is empty
+		Integer peek =deque.peek();//  retrieve head element and does not remove , throws exception if deque is empty
 		
 		System.out.println("peak :"+peek);
 		
 		//deque.clear();
-		Integer first =deque.getFirst();// retrive first element,throws exception if deque is empty
+		Integer first =deque.getFirst();// retrieve first element,throws exception if deque is empty
 		
 		System.out.println("first :"+first);
 		
-		Integer last =deque.getLast();// retrive tail element,throws exception if deque is empty
+		Integer last =deque.getLast();// retrieve tail element,throws exception if deque is empty
 		
 		System.out.println("last :"+last);
 		
-		Integer peekFirst =deque.peekFirst();// retrive head element and does not remove, return null if empty deque
+		Integer peekFirst =deque.peekFirst();// retrieve head element and does not remove, return null if empty deque
 		
 		System.out.println("peekFirst :"+peekFirst);
 		
-		Integer peekLast =deque.peekLast();// retrive tail element and does not remove, return null if empty deque
+		Integer peekLast =deque.peekLast();// retrieve tail element and does not remove, return null if empty deque
 		
 		System.out.println("peekLast :"+peekLast);
 		
-		Integer poll =deque.poll();// retrive head element and  remove ,returns null if emptydeque , no exception occured 
+		Integer poll =deque.poll();// retrieve head element and  remove ,returns null if empty deque , no exception occurred
 		
 		System.out.println("poll :"+poll);
 		
-		Integer pollFirst =deque.pollFirst();// retrive head element and  remove ,returns null if emptydeque , no exception occured 
+		Integer pollFirst =deque.pollFirst();// retrieve head element and  remove ,returns null if empty deque , no exception occurred
 		
 		System.out.println("pollFirst :"+pollFirst);
 		
-		Integer pollLast =deque.pollLast();// retrive last element and  remove ,returns null if emptydeque , no exception occured 
+		Integer pollLast =deque.pollLast();// retrieve last element and  remove ,returns null if empty deque , no exception occurred
 		
 		System.out.println("pollLast :"+pollLast);
 		
 		System.out.println(deque);
 
-		Integer pop =deque.pop();// retrive first(head) element and  remove ,throws exception if emptydeque 
+		Integer pop =deque.pop();// retrieve first(head) element and  remove ,throws exception if empty deque
 		
 		System.out.println("pop :"+pop);
 		

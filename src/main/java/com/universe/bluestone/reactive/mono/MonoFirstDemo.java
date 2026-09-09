@@ -9,7 +9,7 @@ public class MonoFirstDemo {
         Mono<String> mono1 = Mono.just("First Mono").delayElement(Duration.ofMillis(100));
         Mono<String> mono2 = Mono.just("Second Mono").delayElement(Duration.ofMillis(50));
 
-        Mono<String> firstMono = Mono.first(mono1, mono2);
+        Mono<String> firstMono = Mono.firstWithSignal(mono1, mono2);
 
         firstMono.subscribe(result -> System.out.println("Received: " + result));
 

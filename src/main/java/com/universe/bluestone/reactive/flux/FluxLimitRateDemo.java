@@ -13,6 +13,8 @@ public class FluxLimitRateDemo {
                  .limitRate(10) // Limit the rate to 10 items at a time
                  .subscribe(System.out::println);
 
+
+
             System.out.println("Flux.limitRate is used to control the rate of request to the upstream. It allows you to specify how many items to request at a time.");
     }
 }

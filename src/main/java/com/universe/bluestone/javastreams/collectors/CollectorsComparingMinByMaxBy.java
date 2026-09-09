@@ -22,7 +22,7 @@ public class CollectorsComparingMinByMaxBy
         // get a person with the minimum income
         Comparator<Payroll> payrollComparator = Comparator.comparingInt(Payroll::getIncome);
         Payroll minIncome = salaries.stream()
-                            .collect(Collectors.minBy(payrollComparator)).get();
+                            .min(payrollComparator).get();
         System.out.println("Employee with minimum Salary " + minIncome);
  
         // get a person with the maximum income

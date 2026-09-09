@@ -5,7 +5,7 @@ public class StreamParallelStreamDemo {
         long startTime = System.currentTimeMillis();
 
         // Create a parallel stream and perform some operations
-        long count = java.util.stream.IntStream.range(0, 1000000)
+        long count = java.util.stream.LongStream.range(0, 100000000L)
                 .parallel()
                 .filter(i -> i % 2 == 0)
                 .count();

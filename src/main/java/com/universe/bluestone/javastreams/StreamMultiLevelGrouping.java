@@ -50,3 +50,7 @@ public class StreamMultiLevelGrouping {
 
     }
 }
+//output
+//{Engineering=[Employee(name=Alice, department=Engineering, gender=Female), Employee(name=Bob, department=Engineering, gender=Male), Employee(name=Diana, department=Engineering, gender=Female)], HR=[Employee(name=Charlie, department=HR, gender=Male)]}
+//{Engineering={Male=[Employee(name=Bob, department=Engineering, gender=Male)], Female=[Employee(name=Alice, department=Engineering, gender=Female), Employee(name=Diana, department=Engineering, gender=Female)]}, HR={Male=[Employee(name=Charlie, department=HR, gender=Male)]}}
+//{Engineering=[Diana, Bob, Alice], HR=[Charlie]}
